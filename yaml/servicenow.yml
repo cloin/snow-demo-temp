@@ -4,20 +4,20 @@ controller_credential_types:
     description: servicenow.itsm credential
     inputs:
       fields:
-      - type: string
-        id: SN_HOST
-        label: SNOW Instance
-      - type: string
-        id: SN_USERNAME
-        label: SNOW Username
-      - secrete: true
-        type: string
-        id: SN_PASSWORD
-        label: SNOW Password
+        - type: string
+          id: SN_HOST
+          label: SNOW Instance
+        - type: string
+          id: SN_USERNAME
+          label: SNOW Username
+        - secrete: true
+          type: string
+          id: SN_PASSWORD
+          label: SNOW Password
       required:
-      - SN_HOST
-      - SN_USERNAME
-      - SN_PASSWORD
+        - SN_HOST
+        - SN_USERNAME
+        - SN_PASSWORD
     injectors:
       env:
         SN_HOST: '{{ SN_HOST }}'
