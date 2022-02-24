@@ -10,7 +10,7 @@ controller_credential_types:
         - type: string
           id: SN_USERNAME
           label: SNOW Username
-        - secrete: true
+        - secret: true
           type: string
           id: SN_PASSWORD
           label: SNOW Password
