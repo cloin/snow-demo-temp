@@ -23,6 +23,6 @@ controller_credential_types:
         - SN_PASSWORD
     injectors:
       env:
-        SN_HOST: "{% raw %}{{ '{{' }} SN_HOST {{ '}}' }}{% endraw %}"
-        SN_USERNAME: "{% raw %}{{ '{{' }} SN_USERNAME {{ '}}' }}{% endraw %}"
-        SN_PASSWORD: "{% raw %}{{ '{{' }} SN_PASSWORD {{ '}}' }}{% endraw %}"
+        SN_HOST: "{% raw %}{  { SN_HOST }}{% endraw %}"
+        SN_USERNAME: "{% raw %}{  { SN_USERNAME }}{% endraw %}"
+        SN_PASSWORD: "{% raw %}{  { SN_PASSWORD }}{% endraw %}"
