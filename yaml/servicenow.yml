@@ -1,19 +1,19 @@
 ---
 controller_credential_types:
-- name: REST API Credential
-  description: REST API Credential
+- name: servicenow.itsm
+  description: servicenow.itsm credential
   inputs:
     fields:
-    - id: SN_HOST
-      type: string
+    - type: string
+      id: SN_HOST
       label: SNOW Instance
-    - id: SN_USERNAME
-      type: string
+    - type: string
+      id: SN_USERNAME
       label: SNOW Username
-    - id: SN_PASSWORD
+    - secrete: true
       type: string
+      id: SN_PASSWORD
       label: SNOW Password
-
     required:
     - SN_HOST
     - SN_USERNAME
