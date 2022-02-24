@@ -1,0 +1,25 @@
+---
+controller_credential_types:
+- name: REST API Credential
+  description: REST API Credential
+  inputs:
+    fields:
+    - id: SN_HOST
+      type: string
+      label: SNOW Instance
+    - id: SN_USERNAME
+      type: string
+      label: SNOW Username
+    - id: SN_PASSWORD
+      type: string
+      label: SNOW Password
+
+    required:
+    - SN_HOST
+    - SN_USERNAME
+    - SN_PASSWORD
+  injectors:
+    env:
+      SN_HOST: '{{ SN_HOST }}'
+      SN_USERNAME: '{{ SN_USERNAME }}'
+      SN_PASSWORD: '{{ SN_PASSWORD }}'
