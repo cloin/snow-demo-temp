@@ -2,6 +2,7 @@
 controller_credential_types:
   - name: servicenow.itsm
     description: servicenow.itsm credential
+    kind: cloud
     inputs:
       fields:
         - type: string
@@ -20,6 +21,6 @@ controller_credential_types:
         - SN_PASSWORD
     injectors:
       env:
-        SN_HOST: '{{ SN_HOST }}'
-        SN_USERNAME: '{{ SN_USERNAME }}'
-        SN_PASSWORD: '{{ SN_PASSWORD }}'
+        SN_HOST: "{{ SN_HOST }}"
+        SN_USERNAME: "{{ SN_USERNAME }}"
+        SN_PASSWORD: "{{ SN_PASSWORD }}"
