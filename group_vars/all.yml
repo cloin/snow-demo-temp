@@ -1,0 +1,28 @@
+---
+controller_validate_certs: false
+
+controller_credential_types:
+  - name: "servicenow.itsm cloin"
+    description: "servicenow.itsm credential"
+    kind: cloud
+    inputs:
+      fields:
+        - id: SN_HOST
+          type: string
+          label: SNOW Instance
+        - id: SN_USERNAME
+          type: string
+          label: SNOW Username
+        - id: SN_PASSWORD
+          type: string
+          secret: true
+          label: SNOW Password
+      required:
+        - SN_HOST
+        - SN_USERNAME
+        - SN_PASSWORD
+    injectors:
+      env:
+        SN_HOST: "{% raw %}{{ '{{' }} SN_HOST {{ '}}' }}{% endraw %}"
+        SN_USERNAME: "{% raw %}{{ '{{' }} SN_USERNAME {{ '}}' }}{% endraw %}"
+        SN_PASSWORD: "{% raw %}{{ '{{' }} SN_PASSWORD {{ '}}' }}{% endraw %}"
